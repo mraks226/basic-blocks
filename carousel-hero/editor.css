@@ -1,0 +1,17 @@
+.wp-admin {
+    .carousel-hero {
+        @apply !max-w-[1271px] w-full mx-auto;
+
+        .splide {
+            @apply visible;
+
+            &__list {
+                @apply gap-[17px];
+            }
+
+            &__slide {
+                @apply max-w-[431px] w-full;
+            }
+        }
+    }
+}

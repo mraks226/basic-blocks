@@ -1,0 +1,5 @@
+.wp-admin {
+    .image-overlay-text {
+        @apply !max-w-[1160px] mx-auto;
+    }
+}

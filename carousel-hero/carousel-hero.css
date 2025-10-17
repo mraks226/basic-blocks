@@ -1,0 +1,101 @@
+.carousel-hero {
+    @apply !max-w-[1271px] w-full mx-auto mt-[45px];
+
+    .splide {
+        @apply mt-[38px];
+
+        @media (min-width: 1280px) {
+            &:before {
+                @apply content-[""] absolute bottom-[51px] left-[-85px] w-[50px] h-[11px] bg-[#D2D2D2] z-[-1];
+            }
+        }
+
+        &__track {
+            @apply overflow-visible relative;
+
+            @media (min-width: 1280px) {
+                &:before {
+                    @apply content-[""] absolute bottom-[51px] right-[-10px] w-[112px] h-[83px] bg-[#D2D2D2] z-[-1];
+                }
+
+                &:after {
+                    @apply content-[""] absolute top-[-11px] right-[-85px] w-[50px] h-[11px] bg-[#D2D2D2] z-[-1];
+                }
+            }
+        }
+
+        &__slide {
+            @apply flex flex-col relative max-w-[413px];
+
+            &.is-active {
+                .carousel-hero__data {
+                    @apply bg-[#D2D2D2];
+
+                    @media (min-width: 576px) {
+                        @apply bg-[#E5E5E5];
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        @apply min-h-[190px] max-h-[190px];
+
+        @media (min-width: 576px) {
+            @apply hidden;
+        }
+
+        img {
+            @apply w-full h-full object-cover;
+        }
+    }
+
+    &__data {
+        @apply ~px-[16px]/[32px] ~pt-[16px]/[32px] pb-[32px] h-full bg-[#F6F6F6] flex flex-col relative;
+
+        & * {
+            @apply text-center;
+        }
+
+        .featured {
+            @apply tracking-[2.8px] text-[#5A5656] text-[14px] leading-[34px];
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: clamp(18px,2vw,24px);
+            @apply mt-[14px] leading-[34px];
+
+            @media (min-width: 576px) {
+                @apply my-[14px];
+            }
+        }
+
+        .wp-block-button {
+            @apply absolute w-fit self-center bottom-[-20px];
+
+            @media (min-width: 576px) {
+                @apply mt-auto relative;
+            }
+        }
+    }
+
+    &__controls {
+        @apply relative flex justify-center ~mt-[45px]/[38px];
+
+        button {
+            svg {
+                @apply ~w-[14px]/[16px] h-auto cursor-pointer transition-[0.25s];
+            }
+        }
+
+        &_numbers {
+            @apply ~mx-[11px]/[4px];
+
+            & * {
+                @apply ~text-[12px]/[14px] text-[#5A5656];
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.benefits-accordion {
+    background-color: blue;
+    @apply !max-w-[929px];
+
+    .acf-innerblocks-container {
+        .wp-block-heading {
+            & + p {
+                @apply ~mt-[14px]/[17px];
+            }
+        }
+
+        details {
+            @apply mt-[3px];
+
+            @media (max-width: 576px) {
+                margin-right: calc(-1 * var(--wp--style--root--padding-right));
+                margin-left: calc(-1 * var(--wp--style--root--padding-left));
+            }
+
+            &:first-of-type {
+                @apply ~mt-[16px]/[30px];
+            }
+
+            summary {
+                @apply bg-[#E5E5E5] py-[22px] pl-[28px] pr-[58px] relative ~text-[24px]/[32px] ~leading-[32px]/[42px];
+                font-weight: bold;
+
+                @screen tablet {
+                    @apply pl-[42px];
+                }
+
+                &::marker {
+                    @apply content-[""];
+                }
+
+                &:after {
+                    @apply content-[""] absolute right-[23px] top-0 bottom-0 my-auto w-[23px] h-[23px] bg-no-repeat bg-contain;
+                    background-image: url("data:image/svg+xml,%3Csvg style='color: rgb(112, 112, 112);' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM256 368C269.3 368 280 357.3 280 344V280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H280V168C280 154.7 269.3 144 256 144C242.7 144 232 154.7 232 168V232H168C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H232V344C232 357.3 242.7 368 256 368z' fill='%23707070'%3E%3C/path%3E%3C/svg%3E");
+                }
+            }
+
+            &[open] {
+                @apply pb-[30px];
+
+                & > *:not(summary) {
+                    @apply py-0 ~px-[28px]/[16px];
+                }
+
+                summary {
+                    @apply bg-[#9E9C9B] text-[#ffffff];
+
+                    &:after {
+                        background-image: url("data:image/svg+xml,%3Csvg style='color: rgb(247, 247, 247);' xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z' fill='%23f7f7f7'%3E%3C/path%3E%3C/svg%3E");
+                    }
+                }
+            }
+
+            .wp-block-columns {
+                .wp-block-column {
+                    &:first-child {
+                        @screen tablet {
+                            @apply max-w-[283px];
+                        }
+                    }
+
+                    figure {
+                        img {
+                            @apply w-full;
+                        }
+                    }
+                }
+            }
+
+            & > p {
+                @apply mt-[14px];
+            }
+        }
+    }
+}

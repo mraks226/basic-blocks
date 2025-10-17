@@ -1,0 +1,79 @@
+{
+	"name": "acf/benefits-accordion",
+	"title": "Benefits Accordion block",
+	"description": "Benefits Accordion block",
+	"style": "",
+	"editorStyle": "file:./editor.css",
+	"script": "",
+	"category": "vite-theme-blocks",
+	"icon": "cover-image",
+	"apiVersion": 2,
+	"keywords": ["benefits", "accordion", "vite"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "benefits-accordion.render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": ["full"],
+		"anchor": true,
+		"color": {
+			"text": false,
+			"background": false,
+			"link": false
+		},
+		"alignText": false,
+		"dimensions": {
+			"minHeight": true
+		},
+		"spacing": {
+			"margin": [
+				"bottom", "top"
+			],
+			"padding": [
+				"top","bottom"
+			]
+		},
+		"alignContent": ["top", "center", "bottom"],
+		"__experimentalLayout": {
+			"contentSize": true
+		},
+		"multiple" : true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"textColor": {
+			"type": "string",
+			"default": ""
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": ""
+		},
+		"style": {
+			"type": "object",
+			"default": {
+				"dimensions": {
+					"minHeight": "540px"
+				},
+				"spacing": {
+					"margin" : {
+						"bottom" : "0px"
+					},
+					"padding" : {
+						"bottom" : "var:preset|spacing|medium"
+					}
+				}
+			}
+		}
+	},
+	"render_callback": "render_callback",
+	"example": {
+		"attributes" : {
+			"cover" : "block-preview.jpg"
+		}
+	}
+}

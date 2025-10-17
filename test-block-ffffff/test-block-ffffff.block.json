@@ -1,0 +1,65 @@
+{
+    "_comment": "Use the [name] field, replacing the slash with a hyphen to create the [style] handle",
+    "name": "acf/test-block-ffffff",
+    "title": "Test Block Ffffff",
+    "description": "Test",
+    "style": [
+        "file:./../../dist/test-block-ffffff.css"
+    ],
+    "script": [
+        "file:./../../dist/test-block-ffffff_js.js"
+    ],
+    "editorStyle": [
+        "file:./editor.css"
+    ],
+    "category": "vite-theme-blocks",
+    "icon": "dashicons-format-video",
+    "apiVersion": 2,
+    "keywords": [
+        "test block ffffff"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "test-block-ffffff.render.php"
+    },
+    "styles": [],
+    "supports": {
+        "align": [
+            "full"
+        ],
+        "anchor": true,
+        "color": {
+            "text": false,
+            "link": false
+        },
+        "alignText": false,
+        "dimensions": {
+            "minHeight": true
+        },
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": [
+                "top",
+                "bottom"
+            ]
+        },
+        "alignContent": [
+            "top",
+            "center",
+            "bottom"
+        ],
+        "__experimentalLayout": {
+            "contentSize": true
+        },
+        "multiple": true
+    },
+    "render_callback": "render_callback",
+    "example": {
+        "attributes": {
+            "cover": "block-preview.jpg"
+        }
+    }
+}

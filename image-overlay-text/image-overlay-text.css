@@ -1,0 +1,94 @@
+.image-overlay-text {
+    @apply !max-w-[1160px];
+
+    .acf-innerblocks-container {
+        @apply flex justify-end;
+    }
+
+    .wp-block-columns {
+        @apply ~pt-[33px]/[89px] ~pr-[32px]/[77px] ~pb-[48px]/[89px] pl-0 w-full ~gap-[25px]/[77px];
+
+        @screen tablet {
+            max-width: calc(100% - 98px);
+        }
+
+        .wp-block-column {
+            &:first-child {
+                margin-left: calc(-1 * var(--wp--style--root--padding-left));
+
+                @screen tablet {
+                    @apply ml-[-98px] max-w-[474px];
+                }
+            }
+
+            &:last-child {
+                @apply pl-[32px];
+
+                @media (min-width: 576px) {
+                    @apply pl-[77px];
+                }
+
+                @screen tablet {
+                    @apply pl-0;
+                }
+            }
+
+            figure, figure img {
+                @apply w-full h-auto;
+
+                @screen tablet {
+                    @apply max-w-[474px];
+                }
+            }
+
+            & > ul, & > p {
+                @apply ~mt-[12px]/[24px];
+
+                li {
+                    &:not(:first-child) {
+                        @apply mt-[20px];
+                    }
+                }
+
+                & + p {
+                    @apply mt-[20px];
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        &.reverse {
+            .acf-innerblocks-container {
+                @apply justify-start;
+            }
+
+            .wp-block-columns {
+                @apply ~pt-[33px]/[89px] pr-0 ~pb-[48px]/[89px] ~pl-[32px]/[77px];
+
+                @screen tablet {
+                    @apply flex-row-reverse;
+                }
+
+                .wp-block-column {
+                    &:first-child {
+                        margin-right: calc(-1 * var(--wp--style--root--padding-right));
+                        @apply ml-0;
+
+                        @screen tablet {
+                            @apply mr-[-98px];
+                        }
+                    }
+
+                    &:last-child {
+                        @apply pl-0 ~pr-[32px]/[77px];
+
+                        @screen tablet {
+                            @apply pr-0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
