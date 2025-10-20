@@ -1,0 +1,65 @@
+{
+    "_comment": "Use the [name] field, replacing the slash with a hyphen to create the [style] handle",
+    "name": "acf/ggggg-block",
+    "title": "Ggggg Block",
+    "description": "",
+    "style": [
+        "file:./../../dist/ggggg-block.css"
+    ],
+    "script": [
+        "file:./../../dist/ggggg-block_js.js"
+    ],
+    "editorStyle": [
+        "file:./editor.css"
+    ],
+    "category": "vite-theme-blocks",
+    "icon": "admin-appearance",
+    "apiVersion": 2,
+    "keywords": [
+        "ggggg block"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "ggggg-block.render.php"
+    },
+    "styles": [],
+    "supports": {
+        "align": [
+            "full"
+        ],
+        "anchor": true,
+        "color": {
+            "text": false,
+            "link": false
+        },
+        "alignText": false,
+        "dimensions": {
+            "minHeight": true
+        },
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": [
+                "top",
+                "bottom"
+            ]
+        },
+        "alignContent": [
+            "top",
+            "center",
+            "bottom"
+        ],
+        "__experimentalLayout": {
+            "contentSize": true
+        },
+        "multiple": true
+    },
+    "render_callback": "render_callback",
+    "example": {
+        "attributes": {
+            "cover": "block-preview.jpg"
+        }
+    }
+}
