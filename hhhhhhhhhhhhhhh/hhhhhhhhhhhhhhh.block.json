@@ -1,0 +1,65 @@
+{
+    "_comment": "Use the [name] field, replacing the slash with a hyphen to create the [style] handle",
+    "name": "acf/hhhhhhhhhhhhhhh",
+    "title": "Hhhhhhhhhhhhhhh",
+    "description": "",
+    "style": [
+        "file:./../../dist/hhhhhhhhhhhhhhh.css"
+    ],
+    "script": [
+        "file:./../../dist/hhhhhhhhhhhhhhh_js.js"
+    ],
+    "editorStyle": [
+        "file:./editor.css"
+    ],
+    "category": "vite-theme-blocks",
+    "icon": "admin-generic",
+    "apiVersion": 2,
+    "keywords": [
+        "hhhhhhhhhhhhhhh"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hhhhhhhhhhhhhhh.render.php"
+    },
+    "styles": [],
+    "supports": {
+        "align": [
+            "full"
+        ],
+        "anchor": true,
+        "color": {
+            "text": false,
+            "link": false
+        },
+        "alignText": false,
+        "dimensions": {
+            "minHeight": true
+        },
+        "spacing": {
+            "margin": [
+                "top",
+                "bottom"
+            ],
+            "padding": [
+                "top",
+                "bottom"
+            ]
+        },
+        "alignContent": [
+            "top",
+            "center",
+            "bottom"
+        ],
+        "__experimentalLayout": {
+            "contentSize": true
+        },
+        "multiple": true
+    },
+    "render_callback": "render_callback",
+    "example": {
+        "attributes": {
+            "cover": "block-preview.jpg"
+        }
+    }
+}
